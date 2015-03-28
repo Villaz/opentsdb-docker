@@ -25,7 +25,7 @@ RUN git clone -b next --single-branch git://github.com/OpenTSDB/opentsdb.git /op
 RUN cd /opt/opentsdb && bash ./build.sh
 ADD start_opentsdb.sh /opt/sei-bin/
 ADD create_tsdb_tables.sh /opt/sei-bin/
-ADD opentsdb.conf /etc/opentsdb
+ADD opentsdb.conf /etc/opentsdb/
 EXPOSE 4242
 
 #Install Supervisord
