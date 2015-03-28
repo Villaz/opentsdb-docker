@@ -21,6 +21,7 @@ EXPOSE 60030
 
 #Install OpenTSDB and scripts
 RUN mkdir -p /etc/opentsdb
+RUN mkdir -p /usr/share/opentsdb/plugins
 RUN git clone -b next --single-branch git://github.com/OpenTSDB/opentsdb.git /opt/opentsdb
 RUN cd /opt/opentsdb && bash ./build.sh
 ADD start_opentsdb.sh /opt/sei-bin/
